@@ -1,0 +1,23 @@
+<div class="modal-popup">
+  <div class="modal-header">
+    <h4>Buy/Sell</h4>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="onSubmit()" #tradeForm="ngForm">
+
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="onCancel()">
+      Cancel
+    </button>
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!tradeForm.form.valid"
+      (click)="onSubmit()"
+    >
+      Buy/Sell
+    </button>
+  </div>
+</div>

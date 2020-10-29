@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HistoricalDataRoutingModule } from './historical-data-routing.module';
 import { HistoricalDataComponent } from './historical-data.component';
 import { ChartWrapperModule } from '../chart-wrapper/chart-wrapper.module';
+import { BuySellTradeModule } from '../buy-sell-trade/buy-sell-trade.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ChartWrapperModule } from '../chart-wrapper/chart-wrapper.module';
   imports: [
     CommonModule,
     HistoricalDataRoutingModule,
-    ChartWrapperModule
+    ChartWrapperModule,
+    BuySellTradeModule
   ],
   exports: [HistoricalDataComponent],
   entryComponents: [HistoricalDataComponent]

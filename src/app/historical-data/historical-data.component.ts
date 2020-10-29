@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { BaseService } from '../services/base.service';
 
 @Component({
@@ -7,6 +7,10 @@ import { BaseService } from '../services/base.service';
   styleUrls: ['./historical-data.component.scss']
 })
 export class HistoricalDataComponent implements OnInit {
+
+  @ViewChild('popupContainer', { read: ViewContainerRef, static: true }) popupContainerRef: ViewContainerRef;
+  @ViewChild('popupTemplate', { read: TemplateRef, static: true }) popupTemplateRef: TemplateRef<any>;
+
   candleStickChartConfig;
   showChart = false;
   constructor(private baseService: BaseService,
@@ -51,4 +55,12 @@ export class HistoricalDataComponent implements OnInit {
     });
   }
 
+  openPopup(e: MouseEvent) {
+    this.popupContainerRef.clear();
+    this.popupContainerRef.createEmbeddedView(this.popupTemplateRef);
+  }
+
+  closePopup() {
+    this.popupContainerRef.clear();
+  }
 }

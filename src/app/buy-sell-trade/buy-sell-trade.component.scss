@@ -1,0 +1,12 @@
+.modal-popup {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .modal-header {
+    display: flex;
+  }
+  .modal-body {
+    flex: 1;
+    overflow: auto;
+  }
+}
