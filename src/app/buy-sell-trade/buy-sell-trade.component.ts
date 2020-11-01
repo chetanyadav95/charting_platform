@@ -27,8 +27,8 @@ export class BuySellTradeComponent implements OnInit {
     this.callback.emit();
   }
   
-  onUpdateServerName(event: Event){
-    this.serverName=(<HTMLInputElement>event.target).value;
-  }
+//   onUpdateServerName(event: Event){
+//     this.serverName=(<HTMLInputElement>event.target).value;
+//   }
 
 }
