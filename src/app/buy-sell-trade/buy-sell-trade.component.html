@@ -42,7 +42,7 @@
 
             <div class="col-sm">
             <label for="quantity">Quantity:</label>
-            <input type="number" class="form-control" id="quantity" (input)="onUpdateServerName($event)">
+            <input type="number" class="form-control" id="quantity" [(ngModel)]="serverName">
               </div>
               <div class="col-sm">
             <label for="stoploss">Stop Loss:</label>
