@@ -1,12 +1,82 @@
-.modal-popup {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  .modal-header {
-    display: flex;
-  }
-  .modal-body {
-    flex: 1;
-    overflow: auto;
-  }
+// .modal-popup {
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   .modal-header {
+//     display: flex;
+//   }
+//   .modal-body {
+//     flex: 1;
+//     overflow: auto;
+//   }
+// }
+.container {
+  padding: 2rem 0rem;
 }
+
+h4 {
+  margin: 2rem 0rem;
+}
+
+.panel {
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 0.2rem;
+}
+
+.modal-header{
+  height: 100px;
+  background-color: #0009ff;
+  color: white;
+  font-size: 18px;
+}
+.intraday{
+  font-size: 16px;
+}
+.modal-footer .btn{
+  background-color: #0009ff;
+  margin-left:40px;
+  width: 100px;
+  font-size: 18px;
+}
+.form-control{
+  width: 210px;
+}
+.close{
+  height: 100px;
+  outline: none;
+}
+small{
+    font-size: 12px;
+}
+@media screen and (max-width: 280px){
+    .form-control{
+        width: 235px;
+    }
+}
+@media screen and (max-width: 414px) and (min-width: 410px){
+    .form-control{
+        width: 360px;
+    }
+}
+@media screen and (max-width: 400px) and (min-width: 350px){
+    .form-control{
+        width: 330px;
+    }
+}
+@media screen and (max-width: 360px){
+    .form-control{
+        width: 315px;
+    }
+}
+@media screen and (max-width: 320px) and (min-width: 320px){
+    .form-control{
+        width: 275px;
+    }
+}
+@media screen and (max-width: 540px) and (min-width: 540px){
+    .form-control{
+        width: 495px;
+    }
+}
+
