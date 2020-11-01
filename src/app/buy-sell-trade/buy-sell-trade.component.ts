@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./buy-sell-trade.component.scss']
 })
 export class BuySellTradeComponent implements OnInit {
-
+  serverName='';
   @Input() config: any;
 
   @Output() callback: EventEmitter<any> = new EventEmitter();
@@ -25,6 +25,10 @@ export class BuySellTradeComponent implements OnInit {
 
   onCancel() {
     this.callback.emit();
+  }
+  
+  onUpdateServerName(event: Event){
+    this.serverName=(<HTMLInputElement>event.target).value;
   }
 
 }
