@@ -1,6 +1,7 @@
 import { HostListener, Directive, Input, Output, EventEmitter,
   ElementRef, Renderer2, Injectable, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
+import { Options } from 'highcharts';
 import * as Stockcharts from 'highcharts/highstock';
 declare var require: any;
 require('highcharts/modules/heatmap')(Highcharts);
@@ -39,7 +40,7 @@ export class ChartWidgetDirective implements OnInit {
     } else {
       this._chart = Highcharts.chart(
         this.element.nativeElement,
-        this.getChartJson()
+        this.getChartJson() as Options
       );
     }
     this.eventHandler.emit({ eventType: 'render' });
