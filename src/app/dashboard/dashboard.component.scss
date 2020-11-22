@@ -1,0 +1,137 @@
+.blocks {
+  display: inline-block;
+  border: none;
+  width: 200px;
+  //border: 1px solid black;
+}
+
+.wrap {
+  width: 500px;
+  float: right;
+  margin-right: 180px;
+  margin-top: 0px;
+}
+h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #c0c0c0;
+}
+p {
+  text-align: center;
+  font-size: 25px;
+}
+.blocks {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.vl1 {
+  border-right: 1px solid #d3d3d3;
+  height: 100px;
+  margin-right: 405px;
+  margin-top: 75px;
+}
+.vl2 {
+  border-right: 1px solid #d3d3d3;
+  height: 100px;
+  margin-right: 405px;
+  margin-top: 130px;
+}
+
+@media screen and (max-width: 750px) {
+  .vl1,
+  .vl2,
+  hr {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 365px) and (min-width: 345px) {
+  .wrap {
+    width: 300px;
+  }
+  .blocks {
+    width: 300px;
+    margin-left: 145px;
+  }
+}
+
+@media screen and (max-width: 390px) and (min-width: 370px) {
+  .wrap {
+    width: 310px;
+  }
+  .blocks {
+    width: 310px;
+    margin-left: 145px;
+  }
+}
+
+@media screen and (max-width: 430px) and (min-width: 400px) {
+  .wrap {
+    width: 340px;
+  }
+  .blocks {
+    width: 340px;
+    margin-left: 145px;
+  }
+}
+
+@media screen and (max-width: 340px) and (min-width: 300px) {
+  .wrap {
+    width: 280px;
+  }
+  .blocks {
+    width: 280px;
+    margin-left: 160px;
+  }
+}
+
+@media screen and (max-width: 560px) and (min-width: 520px) {
+  .wrap {
+    width: 470px;
+  }
+  .blocks {
+    width: 470px;
+    margin-left: 145px;
+  }
+}
+
+@media screen and (max-width: 290px) and (min-width: 270px) {
+  .wrap {
+    width: 220px;
+  }
+  .blocks {
+    width: 220px;
+    margin-left: 145px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 900px) {
+  .wrap {
+    width: 400px;
+    margin-right: 125px;
+  }
+  .blocks {
+    width: 150px;
+  }
+  .vl1,
+  .vl2 {
+    margin-right: 305px;
+  }
+}
+
+@media screen and (max-width: 780px) and (min-width: 740px) {
+  .wrap {
+    width: 400px;
+    margin-right: 80px;
+  }
+  .blocks {
+    width: 150px;
+  }
+  .vl1,
+  .vl2 {
+    margin-right: 260px;
+  }
+}

@@ -1,1 +1,57 @@
-<p>watchlist works!</p>
+<div class="watchlist">
+  <div class="search">
+      <input type="text" placeholder="SBIN" (input)="createstock($event)">
+      <button class="add" (click)="addstock()">Add</button>
+  </div>
+  <div class="stocklist">
+      <ul>
+          <li class="item" *ngFor="let item of stocks"><span class="stockname">{{item}}</span>
+              <span class="watchlist-options">
+                 <button class="bs" data-toggle="modal" data-target="#form">B/S</button>
+                 <button class="chart-trash" routerLink="/charts"><i class="fa fa-line-chart"></i></button>
+                 <button class="chart-trash" (delete)="deletestock($item)"><i class="fa fa-trash"></i></button>
+              </span>
+          </li>
+          <!--<li class="item"><span class="stockname">RELIANCE</span>
+              <span class="watchlist-options">
+                 <button data-toggle="modal" data-target="#form">B/S</button>
+                 <button><i class="fa fa-line-chart"></i></button>
+                 <button><i class="fa fa-trash"></i></button>
+              </span>
+          </li>-->
+      </ul>
+  </div>
+</div>
+
+<div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header border-bottom-0">
+      <h5 class="modal-title" id="exampleModalLabel">{{stocks[item]}} <small>NSE </small> <span class="stocks">4000</span> x 1 Qty.<br><span class="intraday">Intraday</span></h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form>
+      <div class="modal-body">
+            <div class="form-row">
+
+          <div class="col-sm">
+          <label for="quantity">Quantity:</label>
+          <input type="number" class="form-control" id="quantity">
+            </div>
+            <div class="col-sm">
+          <label for="stoploss">Stop Loss:</label>
+          <input type="number" class="form-control" id="stoploss">
+              </div>
+            </div>
+        </div>
+      <div class="modal-footer border-top-0 d-flex justify-content-center">
+        <button type="submit" class="btn btn-success" routerLink="/positions">Buy</button>
+        <button type="submit" class="btn btn-success" routerLink="/positions">Sell</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
