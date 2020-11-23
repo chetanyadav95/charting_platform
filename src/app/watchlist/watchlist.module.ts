@@ -10,6 +10,8 @@ import { WatchlistComponent } from './watchlist.component';
   imports: [
     CommonModule,
     WatchlistRoutingModule
-  ]
+  ],
+  exports: [WatchlistComponent],
+  entryComponents: [WatchlistComponent]
 })
 export class WatchlistModule { }

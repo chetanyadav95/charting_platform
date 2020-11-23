@@ -10,6 +10,8 @@ import { PositionsComponent } from './positions.component';
   imports: [
     CommonModule,
     PositionsRoutingModule
-  ]
+  ],
+  exports: [PositionsComponent],
+  entryComponents: [PositionsComponent]
 })
 export class PositionsModule { }

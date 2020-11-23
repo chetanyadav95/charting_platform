@@ -10,6 +10,8 @@ import { DashboardComponent } from './dashboard.component';
   imports: [
     CommonModule,
     DashboardRoutingModule
-  ]
+  ],
+  exports: [DashboardComponent],
+  entryComponents: [DashboardComponent]
 })
 export class DashboardModule { }

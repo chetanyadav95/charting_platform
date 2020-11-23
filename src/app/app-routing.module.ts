@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'chart', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 'chart',
-    loadChildren: () => import('./historical-data/historical-data.module').then(m => m.HistoricalDataModule)
+    path: 'home',
+    loadChildren: () => import('./demo-trading-wrapper/demo-trading-wrapper.module').then(m => m.DemoTradingWrapperModule)
   }
 ];
 

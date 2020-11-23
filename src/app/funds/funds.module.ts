@@ -10,6 +10,8 @@ import { FundsComponent } from './funds.component';
   imports: [
     CommonModule,
     FundsRoutingModule
-  ]
+  ],
+  exports: [FundsComponent],
+  entryComponents: [FundsComponent]
 })
 export class FundsModule { }
