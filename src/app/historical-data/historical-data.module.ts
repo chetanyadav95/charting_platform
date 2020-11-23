@@ -5,7 +5,6 @@ import { HistoricalDataRoutingModule } from './historical-data-routing.module';
 import { HistoricalDataComponent } from './historical-data.component';
 import { ChartWrapperModule } from '../chart-wrapper/chart-wrapper.module';
 
-
 @NgModule({
   declarations: [HistoricalDataComponent],
   imports: [
