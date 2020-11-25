@@ -5,7 +5,7 @@ import HIndicatorsAll from "highcharts/indicators/indicators-all";
 import HDragPanes from "highcharts/modules/drag-panes";
 import HAnnotationsAdvanced from "highcharts/modules/annotations-advanced";
 import HPriceIndicator from "highcharts/modules/price-indicator";
-import HFullScreen from "highcharts/modules/full-screen";
+//import HFullScreen from "highcharts/modules/full-screen";
 import HStockTools from "highcharts/modules/stock-tools";
 import { bindCallback } from 'rxjs';
 
@@ -13,7 +13,7 @@ HIndicatorsAll(Highcharts);
 HDragPanes(Highcharts);
 HAnnotationsAdvanced(Highcharts);
 HPriceIndicator(Highcharts);
-HFullScreen(Highcharts);
+//HFullScreen(Highcharts);
 HStockTools(Highcharts);
 @Component({
   selector: 'app-historical-data',

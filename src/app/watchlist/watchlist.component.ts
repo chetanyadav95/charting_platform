@@ -19,6 +19,7 @@ export class WatchlistComponent implements OnInit {
   }
   addstock() {
     this.stocks.push(this.stock);
+
   }
   deletestock(item) {
     this.stocks.splice(item, 1);
