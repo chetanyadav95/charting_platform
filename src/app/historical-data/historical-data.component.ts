@@ -54,6 +54,9 @@ export class HistoricalDataComponent implements OnInit {
         tooltip: {
           borderColor: 'black'
         },
+        yAxis: [{
+          gridLineColor: 'black'
+        }],
         series: [{
             type: 'candlestick',
             name: 'AAPL Stock Price',
