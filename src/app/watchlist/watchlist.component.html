@@ -7,7 +7,8 @@
       <ul>
           <li class="item" *ngFor="let item of stocks"><span class="stockname">{{item}}</span>
               <span class="watchlist-options">
-                 <button class="bs" data-toggle="modal" data-target="#form">B/S</button>
+                <!-- <button class="bs" (click)="openBuySellModal(item)">B/S</button>  -->
+                <button class="bs" data-toggle="modal" data-target="#form">B/S</button>
                  <button class="chart-trash" routerLink="/home/chart"><i class="fa fa-line-chart"></i></button>
                  <button class="chart-trash" (delete)="deletestock(item)"><i class="fa fa-trash"></i></button>
               </span>
@@ -21,6 +22,9 @@
           </li>-->
       </ul>
   </div>
+  <!-- <div class="buy-sell-modal">
+    <router-outlet></router-outlet>
+  </div> -->
 </div>
 
 <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

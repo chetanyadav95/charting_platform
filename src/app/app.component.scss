@@ -2,8 +2,8 @@ $headerHeight: 60px;
 $headerBgColor: #ffffff;
 
 .main {
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: auto;
   .header-wrapper {
     height: $headerHeight;
     width: 100%;

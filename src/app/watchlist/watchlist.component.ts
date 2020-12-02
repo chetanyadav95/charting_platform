@@ -1,4 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BaseService } from '../services/base.service';
 
 @Component({
   selector: 'app-watchlist',
@@ -10,9 +12,10 @@ export class WatchlistComponent implements OnInit {
   stock = '';
   item = 0;
   stocks = [];
-  constructor() {}
+  constructor(private baseService: BaseService,
+    private router:Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   createstock(event: Event) {
     this.stock = (event.target as HTMLInputElement).value;
     // this.stocks.push(this.stock);
@@ -23,5 +26,10 @@ export class WatchlistComponent implements OnInit {
   }
   deletestock(item) {
     this.stocks.splice(item, 1);
+  }
+
+  openBuySellModal(stock) {
+    this.baseService.setStockName(stock);
+    this.router.navigate(['/home/buy-sell']);
   }
 }

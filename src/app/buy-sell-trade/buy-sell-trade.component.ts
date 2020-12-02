@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BaseService } from '../services/base.service';
 
 @Component({
   selector: 'app-buy-sell-trade',
@@ -6,16 +8,20 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./buy-sell-trade.component.scss']
 })
 export class BuySellTradeComponent implements OnInit {
-  serverName='';
+  serverName = '';
   @Input() config: any;
 
   @Output() callback: EventEmitter<any> = new EventEmitter();
 
   model;
-
-  constructor() { }
+  stockName: any;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.data.subscribe(data => {
+      console.log(data);
+      this.stockName = data.stock;
+    });
   }
 
   onSubmit() {
@@ -26,9 +32,9 @@ export class BuySellTradeComponent implements OnInit {
   onCancel() {
     this.callback.emit();
   }
-  
-//   onUpdateServerName(event: Event){
-//     this.serverName=(<HTMLInputElement>event.target).value;
-//   }
+
+  //   onUpdateServerName(event: Event){
+  //     this.serverName=(<HTMLInputElement>event.target).value;
+  //   }
 
 }
