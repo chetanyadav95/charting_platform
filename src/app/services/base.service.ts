@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 export class BaseService {
 
   constructor(private httpClient: HttpClient) { }
+  
+  stockName:any;
 
   getLocalStorageData(key: string): string | null {
     return localStorage.getItem(key);
@@ -40,6 +42,14 @@ export class BaseService {
 
   getLocalMockData(url) {
     return this.httpClient.get(url);
+  }
+
+  setStockName(name){
+    this.stockName = name;
+  }
+
+  getStockName(){
+    return this.stockName;
   }
 
 }

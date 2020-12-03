@@ -1,13 +1,18 @@
-.main-wrapper{
+.main-wrapper {
   display: flex;
   margin-top: 70px;
 }
-.main-wrapper > div {
-  margin: 0px;
-  width: 100%;
+.main-wrapper {
+  // margin: 0px;
+  .watchlist-wrapper {
+    width: 20%;
+  }
+  .content-wrapper {
+    width: 80%;
+    padding: 1%;
+  }
 }
 // .content-wrapper{
 //   margin-left: 600px;
 //   margin-right: 300px;
 // }
-

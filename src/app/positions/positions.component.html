@@ -1,4 +1,24 @@
-<div class="ongoing">
+<ul class="nav nav-tabs">
+  <li class="nav-item" *ngFor="let position of positionList">
+    <a class="nav-link active" (click)="getData(position)">{{position}}</a>
+  </li>
+</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let header of headers">{{header}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let obj of dataList">
+      <th scope="row">{{obj.instrument}}</th>
+      <td>{{obj.qty}}</td>
+      <td>{{obj.price}}</td>
+      <td>{{obj.sl}}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- <div class="ongoing">
   <h3>Ongoing</h3>
   <table>
     <tr>
@@ -67,4 +87,4 @@
     </tr>
   </table>
 </div>
-
+ -->
