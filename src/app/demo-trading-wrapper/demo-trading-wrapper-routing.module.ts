@@ -17,7 +17,8 @@ const routes: Routes = [
       },
       {
         path: 'chart',
-        loadChildren: () => import('./../historical-data/historical-data.module').then(m => m.HistoricalDataModule)
+        // loadChildren: () => import('./../historical-data/historical-data.module').then(m => m.HistoricalDataModule)
+        loadChildren: () => import('./../tv-chart-container/tv-chart-container.module').then(m => m.TvChartContainerModule)
       },
       {
         path: 'positions',
