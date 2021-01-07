@@ -1,1 +1,11 @@
-<p>forums works!</p>
+<h1>{{forum.title}}</h1>
+<h5>{{forum.author}} (<b><span style="color:darkgreen;">{{forum.contribution}}</span></b>)<br>
+{{forum.date}}</h5>
+Tags:<span *ngFor="let tag of forum.tags">&nbsp; &nbsp;<button type="button" class="btn btn-primary">{{tag}}</button></span>
+<hr/>
+{{forum.text}}
+<br>
+&#9650; {{forum.votes}} &#9660;
+<hr/>
+<h3>Comments -- {{comments.length}}</h3>
+<pre *ngFor="let comment of comments">{{comment.author}}<br/>{{comment.message}}<br/>&#9650; {{comment.votes}} &#9660;</pre>
