@@ -24,6 +24,14 @@ const routes: Routes = [
         path: 'positions',
         loadChildren: () => import('./../positions/positions.module').then(m => m.PositionsModule)
       },
+      {
+        path: 'forum/a',
+        loadChildren: () => import('./../forums/forums.module').then(m => m.ForumsModule)
+      },
+      {
+        path: 'forums',
+        loadChildren: () => import('./../forum-list/forum-list.module').then(m => m.ForumListModule)
+      },
     ],
   },
 ];
