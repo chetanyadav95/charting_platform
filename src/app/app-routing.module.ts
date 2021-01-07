@@ -3,11 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'auth/sign/in', pathMatch: 'full' },
   {
     path: 'home',
     loadChildren: () => import('./demo-trading-wrapper/demo-trading-wrapper.module').then(m => m.DemoTradingWrapperModule)
-  }
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth-wrapper/auth-wrapper.module').then(m => m.AuthWrapperModule),
+   },
 ];
 
 @NgModule({

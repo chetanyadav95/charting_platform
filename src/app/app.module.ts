@@ -8,7 +8,7 @@ import { NavigationBarModule } from './navigation-bar/navigation-bar.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
