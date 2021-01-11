@@ -12,7 +12,7 @@
   margin: 5% auto;
   background-color: #EEE;
   padding: 30px 0;
-  height:600px
+  height:700px
 }
 .log h2 {
   text-align: center;
@@ -122,7 +122,7 @@
   text-decoration: underline;
   color: #F00;
 }
-.log form input[type="submit"] {
+.log form button {
   display: block;
   margin: 0 auto 20px;
   border: 2px solid transparent;
@@ -135,10 +135,10 @@
     -o-transition: .5s;
        transition: .5s;
 }
-.log form input[type="submit"]:focus {
+.log form button:focus {
   outline: none;
 }
-.log form input[type="submit"]:hover {
+.log form button:hover {
   border: 2px solid #ed2553;
 }
 

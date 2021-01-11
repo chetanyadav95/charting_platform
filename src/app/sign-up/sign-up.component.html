@@ -8,6 +8,13 @@
     </div>
     {{username}}
     <div class="input-cont">
+      <label for="email">{{email==="" ? "Email" : ""}}</label>
+      <input (keyup)="changeEmail($event)" id="email" type="text" class="form-control">
+      <div class="border1"></div>
+    </div>
+    {{email}}
+    <p style="color:red;">{{emailTouched ? emailError : ""}}</p>
+    <div class="input-cont">
       <label for="password1">{{password1==="" ? "Password" : ""}}</label>
       <input (keyup)="changePassword($event)" id="password1" type="password" class="form-control">
       <div class="border2"></div>
@@ -24,7 +31,7 @@
     </span>
     <a href="/auth/forgot/password">Forgot Password</a> -->
     <div class="clear"></div>
-    <input type="submit" value="Sign Up" routerLink="/auth/sign/up">
-    <a href="/auth/sign/in"><input type="submit" value="Already have an account? Sign In"></a>
+    <button type="button">Sign Up</button> 
+    <button type="button" routerLink="/auth/sign/in">Already have an account? Sign In</button> 
   </form>
 </div>
