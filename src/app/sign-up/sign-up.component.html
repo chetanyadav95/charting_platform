@@ -1,1 +1,30 @@
-<p>sign-up works!</p>
+<div class="log">
+  <h2>Sign Up</h2>
+  <form>
+    <div class="input-cont">
+      <label for="username">{{username==="" ? "Username" : ""}}</label>
+      <input (keyup)="changeUsername($event)" id="username" type="text" class="form-control">
+      <div class="border1"></div>
+    </div>
+    {{username}}
+    <div class="input-cont">
+      <label for="password1">{{password1==="" ? "Password" : ""}}</label>
+      <input (keyup)="changePassword($event)" id="password1" type="password" class="form-control">
+      <div class="border2"></div>
+    </div>
+    {{password1}}
+    <div class="input-cont">
+      <label for="password2">{{password2==="" ? "Confirm Password" : ""}}</label>
+      <input (keyup)="changeConfirmPassword($event)" id="password2" type="password" class="form-control">
+      <div class="border2"></div>
+    </div>
+    {{password2}}    
+ <!--    <span class="check">
+      <input type="checkbox"> <label>Remember Me</label>
+    </span>
+    <a href="/auth/forgot/password">Forgot Password</a> -->
+    <div class="clear"></div>
+    <input type="submit" value="Sign Up" routerLink="/auth/sign/up">
+    <a href="/auth/sign/in"><input type="submit" value="Already have an account? Sign In"></a>
+  </form>
+</div>

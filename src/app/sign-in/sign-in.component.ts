@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
+	changeUsername(event) {
+		// console.log(event.target.value);
+		this.username = event.target.value;
+	}
 
-  ngOnInit() {
-  }
+	changePassword(event){
+		this.password = event.target.value;
+	}
+
+	username = ""
+	password = ""
+	constructor() { }
+
+	ngOnInit() {
+	}
 
 }
